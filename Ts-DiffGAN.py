@@ -289,7 +289,7 @@ class Discriminator(nn.Module):
         input_channels = channels
 
         init_dim = default(init_dim, dim)
-        self.init_conv = nn.Conv1d(input_channels, init_dim, 1)
+        self.init_conv = nn.Conv1d(input_channels, init_dim, 7)
         dims = [init_dim, *map(lambda m: dim * m, dim_mults)]
         in_out = list(zip(dims[:-1], dims[1:]))
         time_dim = dim * 4
