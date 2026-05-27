@@ -177,7 +177,7 @@ class Unet1D(nn.Module):
             dim,
             init_dim=None,
             out_dim=None,
-            dim_mults=(1, 2, 2),
+            dim_mults=(1, 2, 2,2,2,2),
             channels=3,
             resnet_block_groups=8
     ):
@@ -282,7 +282,7 @@ class Discriminator(nn.Module):
         self,
         dim,
         init_dim = None,
-        dim_mults=(1,2,2),
+        dim_mults=(1,2,2,2,2),
         channels = 3
     ):
         super().__init__()
